@@ -23,7 +23,6 @@ public class Imagen {
         this.imgUmbral = imgUmbral;
     }
 
-
     public Imagen(File f) {
         try {
             this.imgUmbral = ImageIO.read(f);

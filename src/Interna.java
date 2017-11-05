@@ -1,22 +1,14 @@
 import java.awt.Dimension;
-import java.awt.event.AdjustmentEvent;
 
 public class Interna extends javax.swing.JInternalFrame {
    
    
     public Interna() {
         initComponents();
-        eventoScroll();
+        scrollPanel1.eventoScroll();
        
     }
-    private void eventoScroll(){
-        scrollPanel1.getHorizontalScrollBar().addAdjustmentListener((AdjustmentEvent e) -> {
-            repaint();  
-        });
-        scrollPanel1.getVerticalScrollBar().addAdjustmentListener((AdjustmentEvent e) -> {
-            repaint();
-        });
-    } 
+
     
     public void addImage(Imagen img){
         panelImagen1.setImagen(img);
