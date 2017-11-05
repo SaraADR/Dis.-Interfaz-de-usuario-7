@@ -153,6 +153,7 @@ public class NewJFrame extends javax.swing.JFrame {
                             "Error umbral",ERROR_MESSAGE);   
         }  
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+ 
     private void GeneraVentana (String name, Imagen imagen){
         Interna ventana = new Interna();
         numVentanas++;

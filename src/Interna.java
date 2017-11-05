@@ -9,7 +9,6 @@ public class Interna extends javax.swing.JInternalFrame {
        
     }
 
-    
     public void addImage(Imagen img){
         panelImagen1.setImagen(img);
         changeSize(img);
