@@ -1,12 +1,22 @@
 import java.awt.Dimension;
+import java.awt.event.AdjustmentEvent;
 
 public class Interna extends javax.swing.JInternalFrame {
    
    
     public Interna() {
         initComponents();
+        eventoScroll();
        
     }
+    private void eventoScroll(){
+        scrollPanel1.getHorizontalScrollBar().addAdjustmentListener((AdjustmentEvent e) -> {
+            repaint();  
+        });
+        scrollPanel1.getVerticalScrollBar().addAdjustmentListener((AdjustmentEvent e) -> {
+            repaint();
+        });
+    } 
     
     public void addImage(Imagen img){
         panelImagen1.setImagen(img);
@@ -23,6 +33,8 @@ public class Interna extends javax.swing.JInternalFrame {
 
         scrollPanel1 = new ScrollPanel();
         panelImagen1 = new PanelImagen();
+
+        panelImagen1.setOpaque(false);
 
         javax.swing.GroupLayout panelImagen1Layout = new javax.swing.GroupLayout(panelImagen1);
         panelImagen1.setLayout(panelImagen1Layout);
@@ -43,7 +55,7 @@ public class Interna extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+                .addComponent(scrollPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
