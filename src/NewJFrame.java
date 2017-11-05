@@ -1,5 +1,3 @@
-
-
 import java.awt.Point;
 import javax.swing.JDesktopPane;
 import javax.swing.JFileChooser;
@@ -13,8 +11,10 @@ public class NewJFrame extends javax.swing.JFrame {
     public NewJFrame() {
         initComponents();
         escritorio.setDragMode(JDesktopPane.OUTLINE_DRAG_MODE);
+        
     }
 
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -139,7 +139,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 "0");
         try{
             if(res != null){
-                img = new Imagen(original.getWidth(), original.getHeigth(), original.getBufferedImage());
+                img = new Imagen( original.getHeigth(),original.getWidth(), original.getBufferedImage());
                 img.umbralizar(Integer.parseInt(res));
                 GeneraVentana("Umbral = " +res, img);
             }
@@ -172,15 +172,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 System.exit(0); 
         }
     }
-    
-    /*
-    
-        JInternalFrame[] ventanaabierta = escritorio.getAllFrames();
-        for (JInternalFrame jInternalFrame : ventanaabierta) {
-            jInternalFrame.dispose();
-        }
-
-    */
     
     /**
      * @param args the command line arguments

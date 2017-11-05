@@ -11,7 +11,7 @@ public class PanelImagen extends JPanel{
     private Imagen img;  
 
     public void setImagen(Imagen i){
-        this.img=i;
+        this.img=i; 
     }
 
     @Override
@@ -19,9 +19,7 @@ public class PanelImagen extends JPanel{
         panelHeight = this.getSize().getHeight();
         panelWidth = this.getSize().getWidth();  
         try{
-            
             g.drawImage(img.getBufferedImage(), 0, 0, null);
-            repaint();
         }catch (NullPointerException ex) {}   
     }
     
