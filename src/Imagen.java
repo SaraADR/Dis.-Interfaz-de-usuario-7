@@ -1,4 +1,3 @@
-
 import boofcv.alg.filter.binary.GThresholdImageOps;
 import boofcv.core.image.ConvertImage;
 import boofcv.gui.binary.VisualizeBinaryData;
